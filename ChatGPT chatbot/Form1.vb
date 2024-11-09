@@ -4,7 +4,9 @@ Imports System.Text
 
 Imports Newtonsoft.Json
 
+Public Property yrgrp As String
 
+Public Property subjct As String
 Public Class Form1
     Private ReadOnly apiKey As String = "PLACE_KEY_HERE"
 
@@ -14,7 +16,7 @@ Public Class Form1
 
     Private Async Function Button1_Click(sender As Object, e As EventArgs) As Task Handles sendBtn.Click
         Dim userinput As String
-        userinput = "" & TxtInp.Text
+        userinput = "The answers to the questions should be suitable for year " & yrgrp & "should be related to" & subjct & ". If it is not related to that subject, it should not be answered. Tell the user you physically cannot answer questions unrelated to" & subjct & ". Never give direct answers, instead give ideas to make them come up with it themselves. Absolutely under no circumstances tell them the exact answer. You can site no more than one source in every prompt and it cannot directly answer the question. Your intention is to aid in learning and the creation of ideas, not to give direct ideas." & TxtInp.Text
 
         If String.IsNullOrWhiteSpace(userinput) Then
             MessageBox.Show("Please enter a message!")
