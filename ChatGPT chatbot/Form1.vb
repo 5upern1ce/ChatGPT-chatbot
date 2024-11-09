@@ -14,7 +14,7 @@ Public Class Form1
 
     Private Async Function Button1_Click(sender As Object, e As EventArgs) As Task Handles sendBtn.Click
         Dim userinput As String
-        userinput = "Act like Weird Al Yancovic, create parodies of songs that I input. Create new lines at the end of a line of the song" & TxtInp.Text
+        userinput = "" & TxtInp.Text
 
         If String.IsNullOrWhiteSpace(userinput) Then
             MessageBox.Show("Please enter a message!")
