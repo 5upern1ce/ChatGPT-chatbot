@@ -29,9 +29,10 @@ Partial Class Form1
         '
         'sendBtn
         '
-        Me.sendBtn.Location = New System.Drawing.Point(658, 382)
+        Me.sendBtn.Location = New System.Drawing.Point(987, 588)
+        Me.sendBtn.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.sendBtn.Name = "sendBtn"
-        Me.sendBtn.Size = New System.Drawing.Size(75, 56)
+        Me.sendBtn.Size = New System.Drawing.Size(112, 86)
         Me.sendBtn.TabIndex = 0
         Me.sendBtn.Text = "Send"
         Me.sendBtn.UseVisualStyleBackColor = True
@@ -39,29 +40,32 @@ Partial Class Form1
         'TxtInp
         '
         Me.TxtInp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.TxtInp.Location = New System.Drawing.Point(58, 382)
+        Me.TxtInp.Location = New System.Drawing.Point(87, 588)
+        Me.TxtInp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtInp.Multiline = True
         Me.TxtInp.Name = "TxtInp"
-        Me.TxtInp.Size = New System.Drawing.Size(594, 56)
+        Me.TxtInp.Size = New System.Drawing.Size(889, 84)
         Me.TxtInp.TabIndex = 1
         '
         'TxtOutput
         '
         Me.TxtOutput.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.TxtOutput.Location = New System.Drawing.Point(58, 34)
+        Me.TxtOutput.Location = New System.Drawing.Point(87, 52)
+        Me.TxtOutput.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtOutput.Multiline = True
         Me.TxtOutput.Name = "TxtOutput"
-        Me.TxtOutput.Size = New System.Drawing.Size(663, 342)
+        Me.TxtOutput.Size = New System.Drawing.Size(992, 524)
         Me.TxtOutput.TabIndex = 2
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1200, 692)
         Me.Controls.Add(Me.TxtOutput)
         Me.Controls.Add(Me.TxtInp)
         Me.Controls.Add(Me.sendBtn)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)

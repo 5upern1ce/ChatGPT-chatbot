@@ -72,4 +72,8 @@ End Class
 Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtInp.TextChanged
 
     End Sub
+
+    Private Sub TxtOutput_TextChanged(sender As Object, e As EventArgs) Handles TxtOutput.TextChanged
+
+    End Sub
 End Class
