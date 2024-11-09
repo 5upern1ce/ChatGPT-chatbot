@@ -6,7 +6,7 @@ Imports Newtonsoft.Json
 
 Public Class Form1
 
-    Private ReadOnly apiKey As String = "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"
+    Private ReadOnly apiKey As String = "INSERT_API_HERE"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
