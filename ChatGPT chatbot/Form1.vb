@@ -18,7 +18,7 @@ Public Class Form1
         Me.yrGrp = yr
         Me.subject = subject
     End Sub
-    Private ReadOnly apiKey As String = "API_KEY_HERE"
+    Private ReadOnly apiKey As String = "PLACE_API_KEY"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
