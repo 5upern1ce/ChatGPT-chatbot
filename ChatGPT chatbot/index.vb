@@ -4,9 +4,11 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles submitBtn.Click
+        Dim yr As String = yrTxt.Text
 
+        Dim subject As String = subjectTxt.Text
 
-        Dim newForm As New Form1()
+        Dim newForm As New Form1(yr, subject)
         newForm.Show()
         Hide()
     End Sub

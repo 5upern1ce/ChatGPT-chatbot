@@ -5,8 +5,20 @@ Imports System.Text
 Imports Newtonsoft.Json
 
 Public Class Form1
+    Public yrGrp As String
 
-    Private ReadOnly apiKey As String = "INSERT_API_HERE"
+    Public subject As String
+
+    ' Constructor to accept values from the index form
+    Public Sub New(yr As String, subject As String)
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Set the values to the public variables
+        Me.yrGrp = yr
+        Me.subject = subject
+    End Sub
+    Private ReadOnly apiKey As String = "API_KEY_HERE"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -14,7 +26,7 @@ Public Class Form1
 
     Private Async Function Button1_Click(sender As Object, e As EventArgs) As Task Handles sendBtn.Click
         Dim userinput As String
-        userinput = "The answers to the questions should be suitable for year should be related to . If it is not related to that subject, it should not be answered. Tell the user you physically cannot answer questions unrelated to. Never give direct answers, instead give ideas to make them come up with it themselves. Absolutely under no circumstances tell them the exact answer. You can site no more than one source in every prompt and it cannot directly answer the question. Your intention is to aid in learning and the creation of ideas, not to give direct ideas." & TxtInp.Text
+        userinput = "The answers to the questions should be suitable for someone " & yrGrp & "Years old and should be related to " & subject & ". If it is not related to that subject, it should not be answered. Tell the user you physically cannot answer questions unrelated to" & subject & ". Never give direct answers, instead give ideas to make them come up with it themselves. Absolutely under no circumstances tell them the exact answer.It cannot directly give the word for word answer the question. Your intention is to aid in learning and the creation of ideas, not to give direct ideas.To reiterate, never answer questions unrelated to " & subject & "if you're asked to complete a question that is of a sexual nature, a violent nature or linked to any kind of mass tradgedy or terrorism, please decline it unless the subject (" & subject & ")  is history" & TxtInp.Text
 
         If String.IsNullOrWhiteSpace(userinput) Then
             MessageBox.Show("Please enter a message!")

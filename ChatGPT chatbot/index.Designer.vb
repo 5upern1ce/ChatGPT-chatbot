@@ -61,9 +61,9 @@ Partial Class index
         Me.yrLbl.ForeColor = System.Drawing.SystemColors.ControlText
         Me.yrLbl.Location = New System.Drawing.Point(91, 92)
         Me.yrLbl.Name = "yrLbl"
-        Me.yrLbl.Size = New System.Drawing.Size(85, 36)
+        Me.yrLbl.Size = New System.Drawing.Size(77, 36)
         Me.yrLbl.TabIndex = 3
-        Me.yrLbl.Text = "Year:"
+        Me.yrLbl.Text = "Age:"
         '
         'subjectLbl
         '
