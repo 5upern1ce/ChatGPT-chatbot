@@ -8,7 +8,7 @@ Public Property yrgrp As String
 
 Public Property subjct As String
 Public Class Form1
-    Private ReadOnly apiKey As String = "PLACE_KEY_HERE"
+    Private ReadOnly apiKey As String = "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"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
