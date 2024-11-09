@@ -3,16 +3,10 @@
 Imports System.Text
 
 Imports Newtonsoft.Json
-Namespace MyNamespace
-    Public Class Mclass
-        ' Declare a property inside a class
-        Public Property subjct As String
-        Public Property yrgrp As String
-    End Class
-End Namespace
 
 Public Class Form1
-    Private ReadOnly apiKey As String = "API_KEY"
+
+    Private ReadOnly apiKey As String = "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"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -20,7 +14,7 @@ Public Class Form1
 
     Private Async Function Button1_Click(sender As Object, e As EventArgs) As Task Handles sendBtn.Click
         Dim userinput As String
-        userinput = "The answers to the questions should be suitable for year " & yrgrp & "should be related to" & subjct & ". If it is not related to that subject, it should not be answered. Tell the user you physically cannot answer questions unrelated to" & subjct & ". Never give direct answers, instead give ideas to make them come up with it themselves. Absolutely under no circumstances tell them the exact answer. You can site no more than one source in every prompt and it cannot directly answer the question. Your intention is to aid in learning and the creation of ideas, not to give direct ideas." & TxtInp.Text
+        userinput = "The answers to the questions should be suitable for year should be related to . If it is not related to that subject, it should not be answered. Tell the user you physically cannot answer questions unrelated to. Never give direct answers, instead give ideas to make them come up with it themselves. Absolutely under no circumstances tell them the exact answer. You can site no more than one source in every prompt and it cannot directly answer the question. Your intention is to aid in learning and the creation of ideas, not to give direct ideas." & TxtInp.Text
 
         If String.IsNullOrWhiteSpace(userinput) Then
             MessageBox.Show("Please enter a message!")
@@ -65,17 +59,17 @@ Public Class Form1
     End Function
 
     Public Class ChatGPTResponse
-    Public Property choices As Choice()
-End Class
+        Public Property choices As Choice()
+    End Class
 
-Public Class Choice
-    Public Property message As Message
-End Class
+    Public Class Choice
+        Public Property message As Message
+    End Class
 
-Public Class Message
-    Public Property content As String
-End Class
-Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtInp.TextChanged
+    Public Class Message
+        Public Property content As String
+    End Class
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtInp.TextChanged
 
     End Sub
 
