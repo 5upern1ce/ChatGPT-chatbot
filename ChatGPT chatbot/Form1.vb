@@ -3,12 +3,16 @@
 Imports System.Text
 
 Imports Newtonsoft.Json
+Namespace MyNamespace
+    Public Class Mclass
+        ' Declare a property inside a class
+        Public Property subjct As String
+        Public Property yrgrp As String
+    End Class
+End Namespace
 
-Public Property yrgrp As String
-
-Public Property subjct As String
 Public Class Form1
-    Private ReadOnly apiKey As String = "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"
+    Private ReadOnly apiKey As String = "API_KEY"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
