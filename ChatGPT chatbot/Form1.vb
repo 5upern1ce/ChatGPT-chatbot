@@ -21,8 +21,48 @@ Public Class Form1
     Private ReadOnly apiKey As String = "PLACE_API_KEY"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ' Adjust controls' size and position initially
+        AdjustControlsSizeAndPosition()
     End Sub
+
+    ' Handle Form Resize event
+    Private Sub Form_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        AdjustControlsSizeAndPosition()
+    End Sub
+
+    ' Adjust all controls' size and position dynamically based on form size
+    Private Sub AdjustControlsSizeAndPosition()
+        ' Ensure the form's client size is reasonable
+        If Me.ClientSize.Width < 100 Or Me.ClientSize.Height < 100 Then
+            Return ' Skip resizing if the form is too small
+        End If
+
+        ' Define proportions for controls
+        Dim buttonProportion As Double = 0.15  ' Button will take up 15% of the form width
+        Dim textBoxProportion As Double = 0.6  ' Textboxes will take up 60% of the form width
+
+        ' Calculate sizes for controls based on form size
+        Dim buttonWidth As Integer = CInt(Me.ClientSize.Width * buttonProportion)
+        Dim buttonHeight As Integer = CInt(Me.ClientSize.Height * 0.1)  ' Button height 10% of form height
+        Dim textBoxWidth As Integer = CInt(Me.ClientSize.Width * textBoxProportion)
+
+        ' Resize and position the output textbox (TxtOutput) - Same width as input + button
+        TxtOutput.Size = New Size(textBoxWidth + buttonWidth + 10, CInt(Me.ClientSize.Height * 0.3))  ' Height 30% of form height
+        ' Adjust the X coordinate of TxtOutput to move it slightly to the left
+        TxtOutput.Location = New Point((Me.ClientSize.Width - TxtOutput.Width) / 2 - 20, (Me.ClientSize.Height - TxtOutput.Height) / 2 - 150)
+
+        ' Resize and position the input textbox (TxtInp)
+        TxtInp.Size = New Size(textBoxWidth, CInt(Me.ClientSize.Height * 0.1))  ' Height 10% of form height
+        TxtInp.Location = New Point((Me.ClientSize.Width - TxtInp.Width) / 2 - buttonWidth - 10, TxtOutput.Bottom + 10)
+
+        ' Resize and position the button (sendBtn) next to the input textbox
+        sendBtn.Size = New Size(buttonWidth, buttonHeight)
+        sendBtn.Location = New Point(TxtInp.Right + 10, TxtInp.Top)
+
+        ' Ensure everything stays within bounds
+        Me.Refresh()
+    End Sub
+
 
     Private Async Function Button1_Click(sender As Object, e As EventArgs) As Task Handles sendBtn.Click
         Dim userinput As String
