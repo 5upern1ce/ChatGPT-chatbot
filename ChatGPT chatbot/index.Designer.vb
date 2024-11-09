@@ -23,6 +23,10 @@ Partial Class index
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.submitBtn = New System.Windows.Forms.Button()
+        Me.yrTxt = New System.Windows.Forms.TextBox()
+        Me.subjectTxt = New System.Windows.Forms.TextBox()
+        Me.yrLbl = New System.Windows.Forms.Label()
+        Me.subjectLbl = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'submitBtn
@@ -34,17 +38,63 @@ Partial Class index
         Me.submitBtn.Text = "Submit"
         Me.submitBtn.UseVisualStyleBackColor = True
         '
+        'yrTxt
+        '
+        Me.yrTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.yrTxt.Location = New System.Drawing.Point(182, 89)
+        Me.yrTxt.Name = "yrTxt"
+        Me.yrTxt.Size = New System.Drawing.Size(463, 41)
+        Me.yrTxt.TabIndex = 1
+        '
+        'subjectTxt
+        '
+        Me.subjectTxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.subjectTxt.Location = New System.Drawing.Point(202, 192)
+        Me.subjectTxt.Name = "subjectTxt"
+        Me.subjectTxt.Size = New System.Drawing.Size(443, 41)
+        Me.subjectTxt.TabIndex = 2
+        '
+        'yrLbl
+        '
+        Me.yrLbl.AutoSize = True
+        Me.yrLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.yrLbl.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.yrLbl.Location = New System.Drawing.Point(91, 92)
+        Me.yrLbl.Name = "yrLbl"
+        Me.yrLbl.Size = New System.Drawing.Size(85, 36)
+        Me.yrLbl.TabIndex = 3
+        Me.yrLbl.Text = "Year:"
+        '
+        'subjectLbl
+        '
+        Me.subjectLbl.AutoSize = True
+        Me.subjectLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.subjectLbl.Location = New System.Drawing.Point(64, 192)
+        Me.subjectLbl.Name = "subjectLbl"
+        Me.subjectLbl.Size = New System.Drawing.Size(123, 36)
+        Me.subjectLbl.TabIndex = 4
+        Me.subjectLbl.Text = "Subject:"
+        '
         'index
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.subjectLbl)
+        Me.Controls.Add(Me.yrLbl)
+        Me.Controls.Add(Me.subjectTxt)
+        Me.Controls.Add(Me.yrTxt)
         Me.Controls.Add(Me.submitBtn)
         Me.Name = "index"
         Me.Text = "index"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents submitBtn As Button
+    Friend WithEvents yrTxt As TextBox
+    Friend WithEvents subjectTxt As TextBox
+    Friend WithEvents yrLbl As Label
+    Friend WithEvents subjectLbl As Label
 End Class
